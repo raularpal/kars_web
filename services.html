@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <title>Els Nostres Serveis | Kars Andorra</title>
+    <meta name="description" content="Descubre todos los servicios que KARS Automòbils ofrece en Andorra.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="language-selector">
+                    <a href="#" class="lang-btn active">CA</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">ES</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">FR</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">EN</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="KARS Automòbils" style="height: 60px; width: auto;">
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="catalog.html" data-i18n="nav_catalog">Vehículos</a></li>
+                    <li><a href="index.html#nosotros" data-i18n="nav_about">Nosotros</a></li>
+                    <li><a href="services.html" class="active" data-i18n="nav_services">Servicios</a></li>
+                    <li><a href="sales.html" data-i18n="nav_sales">Últimas ventas</a></li>
+                    <li><a href="index.html#contacto" data-i18n="nav_contact">Contacto</a></li>
+                </ul>
+
+                <div class="nav-cta">
+                    <a href="https://wa.me/376800100" class="whatsapp-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> <span class="desktop-only">+376 800 100</span>
+                    </a>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services" style="padding-top: 150px;">
+        <div class="container">
+            <h2 data-i18n="services_title">Nuestros Servicios</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: #666;">
+                Descubre toda la gama de servicios profesionales que ofrecemos para brindarte la mejor experiencia en la
+                compra de tu vehículo</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-car service-icon"></i>
+                    <h3 data-i18n="service_sales_title">Venta de Vehículos</h3>
+                    <p data-i18n="service_sales_desc">Amplio stock de vehículos nuevos, semi-nuevos y de ocasión de las
+                        marcas más prestigiosas.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-globe service-icon"></i>
+                    <h3 data-i18n="service_import_title">Importación a la Carta</h3>
+                    <p data-i18n="service_import_desc">Si buscas un modelo específico, lo encontramos e importamos para
+                        ti con todas las garantías.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
+                    <h3 data-i18n="service_workshop_title">Taller Especializado</h3>
+                    <p data-i18n="service_workshop_desc">Servicio post-venta, mantenimiento y reparaciones con mecánicos
+                        expertos en alta gama.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-shield-halved service-icon"></i>
+                    <h3 data-i18n="service_warranty_title">Garantía y Gestoría</h3>
+                    <p data-i18n="service_warranty_desc">Nos encargamos de todos los trámites y ofrecemos garantías
+                        complementarias para tu tranquilidad.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-language service-icon"></i>
+                    <h3 data-i18n="service_multilingual_title">Atención Personalizada</h3>
+                    <p data-i18n="service_multilingual_desc">Atención personalizada en 6 idiomas (Català, Castellà,
+                        Francès, Anglès, Italià, Portuguès)</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-handshake service-icon"></i>
+                    <h3 data-i18n="service_tradein_title">Vehículos como Parte de Pago</h3>
+                    <p data-i18n="service_tradein_desc">Aceptamos tu vehículo como parte de pago, incluido depósito
+                        venta</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-bolt service-icon"></i>
+                    <h3 data-i18n="service_instant_title">Compra Instantánea</h3>
+                    <p data-i18n="service_instant_desc">Proceso de compra rápido y eficiente para tu comodidad</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-gem service-icon"></i>
+                    <h3 data-i18n="service_exclusive_title">Productos Exclusivos</h3>
+                    <p data-i18n="service_exclusive_desc">Acceso a vehículos exclusivos y ediciones limitadas</p>
+                </div>
+            </div>
+
+            <!-- WhatsApp CTA -->
+            <div
+                style="text-align: center; margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a1a 100%); border-radius: 12px;">
+                <a href="https://wa.me/376800100" class="btn btn-whatsapp" target="_blank"
+                    style="font-size: 1.2rem; padding: 15px 40px;">
+                    <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>KARS AUTOMÒBILS</h4>
+                    <p data-i18n="footer_desc">Tu concesionario de confianza en Andorra para vehículos premium y
+                        deportivos.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="contact_title_only">Contacto</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-phone" style="color: var(--accent-color);"></i> <a
+                                href="tel:+376800100">+376 800 100</a></li>
+                        <li><i class="fa-solid fa-envelope" style="color: var(--accent-color);"></i> <a
+                                href="mailto:info@kars.ad">info@kars.ad</a></li>
+                        <li><a href="https://www.instagram.com/karsandorra/" target="_blank"><i
+                                    class="fa-brands fa-instagram" style="color: var(--accent-color);"></i>
+                                @karsandorra</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KARS <span data-i18n="footer_powered">powered by</span> <a
+                        href="https://raularpal.github.io/Arpal_web/" class="arpal-link" target="_blank">Arpal</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/376800100" class="floating-whatsapp" target="_blank" title="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

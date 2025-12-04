@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <title>Kars Andorra</title>
+    <meta name="description"
+        content="Concesionario multimarca premium en Andorra. Coches de lujo, deportivos y exclusivos. Experiencia, garantía y atención personalizada.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="language-selector">
+                    <a href="#" class="lang-btn active">CA</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">ES</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">FR</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">EN</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="assets/logo.png" alt="KARS Automòbils" style="height: 60px; width: auto;">
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="#home" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="catalog.html" data-i18n="nav_catalog">Vehículos</a></li>
+                    <li><a href="#nosotros" data-i18n="nav_about">Nosotros</a></li>
+                    <li><a href="services.html" data-i18n="nav_services">Servicios</a></li>
+                    <li><a href="sales.html" data-i18n="nav_sales">Últimas ventas</a></li>
+                    <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+                </ul>
+
+                <div class="nav-cta">
+                    <a href="https://wa.me/376800100" class="whatsapp-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> <span class="desktop-only">+376 800 100</span>
+                    </a>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero_title">Excelencia en Movimiento</h1>
+            <p data-i18n="hero_subtitle">Descubre nuestra selección exclusiva de vehículos premium, deportivos y de lujo
+                en Andorra. 30 años de
+                experiencia a tu servicio.</p>
+            <div class="hero-buttons">
+                <a href="catalog.html" class="btn btn-primary" data-i18n="hero_btn_view">Ver Vehículos</a>
+                <a href="#contacto" class="btn btn-outline" data-i18n="hero_btn_contact">Contactar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Vehicles (Catalog Preview) -->
+    <section id="catalogo" class="featured">
+        <div class="container">
+            <h2 data-i18n="featured_title">Vehículos Destacados</h2>
+
+
+
+            <div class="vehicle-grid">
+                <!-- Vehicle 1 -->
+                <div class="vehicle-card">
+                    <div class="card-image">
+                        <img src="assets/car1.png" alt="Premium SUV">
+                    </div>
+                    <div class="card-details">
+                        <h3>Porsche Cayenne Turbo GT</h3>
+                        <span class="card-price">185.000 €</span>
+                        <div class="card-specs">
+                            <span><i class="fa-solid fa-gauge-high"></i> 15.000 km</span>
+                            <span><i class="fa-solid fa-calendar"></i> 2023</span>
+                            <span><i class="fa-solid fa-horse"></i> 640 cv</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://wa.me/376800100?text=Hola, me interesa el Porsche Cayenne"
+                                class="btn btn-dark btn-block" data-i18n="btn_consult">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 2 -->
+                <div class="vehicle-card">
+                    <div class="card-image">
+                        <img src="assets/car2.png" alt="Luxury Sedan">
+                    </div>
+                    <div class="card-details">
+                        <h3>Mercedes-Benz S 580</h3>
+                        <span class="card-price">142.900 €</span>
+                        <div class="card-specs">
+                            <span><i class="fa-solid fa-gauge-high"></i> 5.000 km</span>
+                            <span><i class="fa-solid fa-calendar"></i> 2024</span>
+                            <span><i class="fa-solid fa-horse"></i> 503 cv</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://wa.me/376800100?text=Hola, me interesa el Mercedes S Class"
+                                class="btn btn-dark btn-block" data-i18n="btn_consult">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 3 -->
+                <div class="vehicle-card">
+                    <div class="card-image">
+                        <img src="assets/car3.png" alt="Sports Coupe">
+                    </div>
+                    <div class="card-details">
+                        <h3>Ferrari Roma</h3>
+                        <span class="card-price">230.000 €</span>
+                        <div class="card-specs">
+                            <span><i class="fa-solid fa-gauge-high"></i> 2.500 km</span>
+                            <span><i class="fa-solid fa-calendar"></i> 2022</span>
+                            <span><i class="fa-solid fa-horse"></i> 620 cv</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://wa.me/376800100?text=Hola, me interesa el Ferrari Roma"
+                                class="btn btn-dark btn-block" data-i18n="btn_consult">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="catalog.html" class="btn btn-outline"
+                    style="color: var(--primary-color); border-color: var(--primary-color);"
+                    data-i18n="btn_view_all">Ver todos los vehículos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-i18n="about_title">Quiénes Somos</h2>
+                    <p data-i18n="about_text_1">En <strong>KARS Automòbils</strong>, llevamos más de 30 años dedicados a
+                        la pasión por el motor.
+                        Somos un concesionario multimarca independiente especializado en vehículos premium, deportivos y
+                        de lujo.</p>
+                    <p data-i18n="about_text_2">Nuestra filosofía se basa en la transparencia, la confianza y una
+                        atención totalmente
+                        personalizada. Ofrecemos una selección de coches revisados sistemáticamente y garantizados, para
+                        que solo te preocupes de disfrutar de la conducción.</p>
+
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-check-circle feature-icon"></i>
+                            <div>
+                                <h4 data-i18n="feature_warranty_title">Garantía Premium</h4>
+                                <p data-i18n="feature_warranty_desc">12 meses de cobertura amplia.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-handshake feature-icon"></i>
+                            <div>
+                                <h4 data-i18n="feature_direct_title">Trato Directo</h4>
+                                <p data-i18n="feature_direct_desc">Sin intermediarios innecesarios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <!-- Placeholder for showroom image or team -->
+                    <img src="assets/hero.png" alt="KARS Showroom"
+                        style="border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 data-i18n="contact_title_only">Contacto</h2>
+
+            <!-- Bottom: Contact Buttons -->
+            <div class="contact-buttons-row">
+                <div class="contact-card-small">
+                    <div class="contact-card-icon-small">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="contact-card-info">
+                        <h4 data-i18n="contact_call_title">Llámanos</h4>
+                        <a href="tel:+376800100" class="contact-link">+376 800 100</a>
+                    </div>
+                </div>
+
+                <div class="contact-card-small">
+                    <div class="contact-card-icon-small">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-card-info">
+                        <h4 data-i18n="contact_write_title">Escríbenos</h4>
+                        <a href="mailto:info@kars.ad" class="contact-link">info@kars.ad</a>
+                    </div>
+                </div>
+
+                <div class="contact-card-small">
+                    <div class="contact-card-icon-small">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-card-info">
+                        <h4>WhatsApp</h4>
+                        <a href="https://wa.me/376800100" target="_blank" class="contact-link">+376 800 100</a>
+                    </div>
+                </div>
+
+                <div class="contact-card-small">
+                    <div class="contact-card-icon-small">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="contact-card-info">
+                        <h4>Instagram</h4>
+                        <a href="https://www.instagram.com/karsandorra/" target="_blank"
+                            class="contact-link">@karsandorra</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Layout: Form Left, Map/Location Right -->
+            <div class="contact-main-layout">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3 data-i18n="form_title">Envíanos un mensaje</h3>
+                    <form class="contact-form-modern">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre" data-i18n-placeholder="form_name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" data-i18n-placeholder="form_email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Teléfono (opcional)" data-i18n-placeholder="form_phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Mensaje o vehículo de interés" data-i18n-placeholder="form_message"
+                                rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="form_submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Map and Location Info -->
+                <div class="contact-map-location">
+                    <div class="contact-map-compact">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Baixada+del+Mol%C3%AD+39,+Andorra+la+Vella&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+
+                    <div class="contact-location-compact">
+                        <div class="location-compact-item">
+                            <h4><i class="fa-solid fa-location-dot"></i> <span
+                                    data-i18n="contact_visit_title">Visítanos</span></h4>
+                            <p>Baixada del Molí 39, AD500 Andorra la Vella</p>
+                        </div>
+                        <div class="location-compact-item">
+                            <h4><i class="fa-solid fa-clock"></i> <span data-i18n="footer_schedule">Horario</span></h4>
+                            <p data-i18n="schedule_week">Lunes - Jueves: 09:00 - 13:30 / 15:00 - 19:00</p>
+                            <p data-i18n="schedule_sat">Viernes: 09:00 - 15:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>KARS AUTOMÒBILS</h4>
+                    <p data-i18n="footer_desc">Tu concesionario de confianza en Andorra para vehículos premium y
+                        deportivos.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="contact_title_only">Contacto</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-phone" style="color: var(--accent-color);"></i> <a
+                                href="tel:+376800100">+376 800 100</a></li>
+                        <li><i class="fa-solid fa-envelope" style="color: var(--accent-color);"></i> <a
+                                href="mailto:info@kars.ad">info@kars.ad</a></li>
+                        <li><a href="https://www.instagram.com/karsandorra/" target="_blank"><i
+                                    class="fa-brands fa-instagram" style="color: var(--accent-color);"></i>
+                                @karsandorra</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KARS <span data-i18n="footer_powered">powered by</span> <a
+                        href="https://raularpal.github.io/Arpal_web/" class="arpal-link" target="_blank">Arpal</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/376800100" class="floating-whatsapp" target="_blank" title="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="sync.js"></script>
+    <script>
+        // Update featured vehicles with sync data
+        function updateFeaturedVehicles(vehicles) {
+            const grid = document.querySelector('.vehicle-grid');
+            if (!grid) return;
+            
+            const html = vehicles.slice(0, 3).map(vehicle => `
+                <div class="vehicle-card">
+                    <div class="card-image">
+                        <img src="${vehicle.image}" alt="${vehicle.brand} ${vehicle.model}">
+                        <div class="card-price-overlay">
+                            ${vehicle.discounted_price ? `
+                                <div>
+                                    <span style="text-decoration: line-through; opacity: 0.7; font-size: 0.8rem;">
+                                        ${vehicle.price.toLocaleString('de-DE')} €
+                                    </span>
+                                    <div style="font-weight: 700;">
+                                        ${vehicle.discounted_price.toLocaleString('de-DE')} €
+                                    </div>
+                                </div>
+                            ` : `
+                                ${vehicle.price.toLocaleString('de-DE')} €
+                            `}
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-header">
+                            <h3>${vehicle.brand} ${vehicle.model}</h3>
+                        </div>
+                        <div class="card-specs">
+                            <span><i class="fa-solid fa-gauge-high"></i> ${vehicle.km.toLocaleString()} km</span>
+                            <span><i class="fa-solid fa-calendar"></i> ${vehicle.year}</span>
+                            <span><i class="fa-solid fa-horse"></i> ${vehicle.hp} cv</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://wa.me/376800100?text=Hola, me interesa el ${vehicle.brand} ${vehicle.model}"
+                                class="btn btn-dark btn-block" target="_blank"><i class="fa-brands fa-whatsapp"></i> Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            grid.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>

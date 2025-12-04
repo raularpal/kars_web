@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <title>Últimes Vendes | Kars Andorra</title>
+    <meta name="description" content="Vehículos recientemente vendidos por KARS Automòbils en Andorra.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="language-selector">
+                    <a href="#" class="lang-btn active">CA</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">ES</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">FR</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">EN</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="KARS Automòbils" style="height: 60px; width: auto;">
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="catalog.html" data-i18n="nav_catalog">Vehículos</a></li>
+                    <li><a href="index.html#nosotros" data-i18n="nav_about">Nosotros</a></li>
+                    <li><a href="services.html" data-i18n="nav_services">Servicios</a></li>
+                    <li><a href="sales.html" class="active" data-i18n="nav_sales">Últimas ventas</a></li>
+                    <li><a href="index.html#contacto" data-i18n="nav_contact">Contacto</a></li>
+                </ul>
+
+                <div class="nav-cta">
+                    <a href="https://wa.me/376800100" class="whatsapp-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> <span class="desktop-only">+376 800 100</span>
+                    </a>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Recent Sales Section -->
+    <section class="recent-sales" style="padding-top: 150px; background-color: white;">
+        <div class="container">
+            <div class="sales-header">
+                <h2 data-i18n="sales_title">Últimas Ventas</h2>
+                <div>
+                    <div class="results-count">Mostrando <span id="sales-count">4</span> vehículos vendidos</div>
+                </div>
+            </div>
+            <div class="sales-grid">
+                <div class="sale-card">
+                    <div class="sale-image">
+                        <img src="assets/car1.png" alt="Porsche 911 Carrera S">
+                        <div class="sold-badge">VENDIDO</div>
+                        <div class="card-price-overlay">185.000 €</div>
+                    </div>
+                    <div class="sale-info">
+                        <h3>Porsche 911 Carrera S</h3>
+                        <p class="sale-date"><i class="fa-solid fa-calendar"></i> Vendido en Diciembre 2024</p>
+                    </div>
+                </div>
+
+                <div class="vehicle-card sold-card">
+                    <div class="card-image">
+                        <img src="assets/car2.png" alt="Mercedes-AMG GT">
+                        <div class="sold-badge">VENDIDO</div>
+                        <div class="card-price-overlay">145.000 €</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-header">
+                            <h3>Mercedes-AMG GT</h3>
+                        </div>
+                        <div class="card-specs">
+                            <span><i class="fa-solid fa-gauge-high"></i> 8.500 km</span>
+                            <span><i class="fa-solid fa-calendar"></i> 2021</span>
+                            <span><i class="fa-solid fa-horse"></i> 530 cv</span>
+                        </div>
+                        <div class="sale-date">
+                            <i class="fa-solid fa-calendar-check"></i> Vendido en Octubre 2024
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card sold-card">
+                    <div class="card-image">
+                        <img src="assets/car2.png" alt="Lamborghini Huracán">
+                        <div class="sold-badge">VENDIDO</div>
+                        <div class="card-price-overlay">285.000 €</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-header">
+                            <h3>Lamborghini Huracán</h3>
+                        </div>
+                        <div class="card-specs">
+                            <span><i class="fa-solid fa-gauge-high"></i> 3.200 km</span>
+                            <span><i class="fa-solid fa-calendar"></i> 2020</span>
+                            <span><i class="fa-solid fa-horse"></i> 640 cv</span>
+                        </div>
+                        <div class="sale-date">
+                            <i class="fa-solid fa-calendar-check"></i> Vendido en Octubre 2024
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card sold-card">
+                    <div class="card-image">
+                        <img src="assets/car3.png" alt="Range Rover Sport">
+                        <div class="sold-badge">VENDIDO</div>
+                        <div class="card-price-overlay">95.000 €</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-header">
+                            <h3>Range Rover Sport</h3>
+                        </div>
+                        <div class="card-specs">
+                            <span><i class="fa-solid fa-gauge-high"></i> 22.000 km</span>
+                            <span><i class="fa-solid fa-calendar"></i> 2022</span>
+                            <span><i class="fa-solid fa-horse"></i> 350 cv</span>
+                        </div>
+                        <div class="sale-date">
+                            <i class="fa-solid fa-calendar-check"></i> Vendido en Septiembre 2024
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>KARS AUTOMÒBILS</h4>
+                    <p data-i18n="footer_desc">Tu concesionario de confianza en Andorra para vehículos premium y
+                        deportivos.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="contact_title_only">Contacto</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-phone" style="color: var(--accent-color);"></i> <a
+                                href="tel:+376800100">+376 800 100</a></li>
+                        <li><i class="fa-solid fa-envelope" style="color: var(--accent-color);"></i> <a
+                                href="mailto:info@kars.ad">info@kars.ad</a></li>
+                        <li><a href="https://www.instagram.com/karsandorra/" target="_blank"><i
+                                    class="fa-brands fa-instagram" style="color: var(--accent-color);"></i>
+                                @karsandorra</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KARS <span data-i18n="footer_powered">powered by</span> <a
+                        href="https://raularpal.github.io/Arpal_web/" class="arpal-link" target="_blank">Arpal</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/376800100" class="floating-whatsapp" target="_blank" title="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

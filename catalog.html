@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <title>Catálogo | Kars Andorra</title>
+    <meta name="description"
+        content="Explora nuestro catálogo de vehículos premium en Andorra. Filtra por marca, precio, potencia y más.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline styles for catalog specific layout to be moved to style.css later if needed */
+        .catalog-page {
+            padding-top: 150px;
+            /* Account for fixed header */
+            padding-bottom: 5rem;
+            background-color: var(--bg-light);
+            min-height: 100vh;
+        }
+
+        .catalog-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+        }
+
+        .filters-sidebar {
+            background: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+        }
+
+        .filter-group {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+
+        .filter-group:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .filter-group h4 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .filter-option input {
+            margin-right: 10px;
+            accent-color: var(--accent-color);
+        }
+
+        .price-range-inputs {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .price-input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            font-size: 0.9rem;
+        }
+
+        .catalog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .results-count {
+            color: #666;
+        }
+
+        .sort-select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            background: white;
+        }
+
+        @media (max-width: 900px) {
+            .catalog-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .filters-sidebar {
+                display: none;
+                /* Mobile filters logic would go here */
+            }
+
+            .mobile-filter-toggle {
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="language-selector">
+                    <a href="#" class="lang-btn active">CA</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">ES</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">FR</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="lang-btn">EN</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="KARS Automòbils" style="height: 60px; width: auto;">
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="catalog.html" class="active" data-i18n="nav_catalog">Vehículos</a></li>
+                    <li><a href="index.html#nosotros" data-i18n="nav_about">Nosotros</a></li>
+                    <li><a href="services.html" data-i18n="nav_services">Servicios</a></li>
+                    <li><a href="sales.html" data-i18n="nav_sales">Últimas ventas</a></li>
+                    <li><a href="index.html#contacto" data-i18n="nav_contact">Contacto</a></li>
+                </ul>
+
+                <div class="nav-cta">
+                    <a href="https://wa.me/376800100" class="whatsapp-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> <span class="desktop-only">+376 800 100</span>
+                    </a>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Catalog Section -->
+    <section class="catalog-page">
+        <div class="container">
+            <div class="catalog-header">
+                <div>
+                    <h1>Catálogo de Vehículos</h1>
+                    <div>
+                        <div class="results-count">Mostrando <span id="vehicle-count">0</span> vehículos</div>
+                        <select id="sort-select" class="sort-select">
+                            <option value="date-desc">Últimos publicados</option>
+                            <option value="price-asc">Precio: Menor a Mayor</option>
+                            <option value="price-desc">Precio: Mayor a Menor</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog-layout">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <h4>Tipo de Vehículo</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" name="type" value="deportivo"> Deportivo
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="type" value="suv"> SUV / 4x4
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="type" value="berlina"> Berlina
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="type" value="coupe"> Coupé
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Combustible</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" name="fuel" value="gasolina"> Gasolina
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="fuel" value="diesel"> Diésel
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="fuel" value="hibrido"> Híbrido
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="fuel" value="electrico"> Eléctrico
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Potencia (CV)</h4>
+                        <div class="price-range-inputs">
+                            <input type="number" id="min-hp" class="price-input" placeholder="Min">
+                            <span>-</span>
+                            <input type="number" id="max-hp" class="price-input" placeholder="Max">
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Precio (€)</h4>
+                        <div class="price-range-inputs">
+                            <input type="number" id="min-price" class="price-input" placeholder="Min">
+                            <span>-</span>
+                            <input type="number" id="max-price" class="price-input" placeholder="Max">
+                        </div>
+                    </div>
+
+                    <button id="apply-filters" class="btn btn-primary btn-block" style="margin-top: 1rem;">Aplicar
+                        Filtros</button>
+                    <button id="reset-filters" class="btn btn-outline btn-block"
+                        style="margin-top: 0.5rem; border: none; color: #666;">Limpiar</button>
+                </aside>
+
+                <!-- Vehicle Grid -->
+                <div class="vehicle-grid" id="catalog-grid">
+                    <!-- Vehicles will be injected here by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>KARS AUTOMÒBILS</h4>
+                    <p data-i18n="footer_desc">Tu concesionario de confianza en Andorra para vehículos premium y
+                        deportivos.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="contact_title_only">Contacto</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-phone" style="color: var(--accent-color);"></i> <a
+                                href="tel:+376800100">+376 800 100</a></li>
+                        <li><i class="fa-solid fa-envelope" style="color: var(--accent-color);"></i> <a
+                                href="mailto:info@kars.ad">info@kars.ad</a></li>
+                        <li><a href="https://www.instagram.com/karsandorra/" target="_blank"><i
+                                    class="fa-brands fa-instagram" style="color: var(--accent-color);"></i>
+                                @karsandorra</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KARS <span data-i18n="footer_powered">powered by</span> <a
+                        href="https://raularpal.github.io/Arpal_web/" class="arpal-link" target="_blank">Arpal</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/376800100" class="floating-whatsapp" target="_blank" title="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="sync.js"></script>
+    <script src="catalog.js"></script>
+</body>
+
+</html>
